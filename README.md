@@ -67,8 +67,11 @@ Lastly run the installer
 sudo bash NVIDIA-....run
 ```
 I would recommend to enable 32-bit support if propted.
+
 Next select Install and overwrite existing filesort instalation.
+
 It should ask you to generate Xorg configuration. Accept that too.
+
 If not run nvidia-xconfig after the installer finishes.
 
 Reenable GUI

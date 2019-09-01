@@ -50,6 +50,7 @@ sudo systemctl stop gdm3
 If you see a black screen just press **CTRL+ALT+F1** and type
 ```
 sudo systemctl set-default multi-user.target
+sudo update-initramfs -u
 ```
 Next reboot
 ```

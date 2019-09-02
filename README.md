@@ -51,7 +51,7 @@ If you see a black screen just press **CTRL+ALT+F1** and type
 ```
 sudo systemctl set-default multi-user.target
 ```
-In some cases you will need to use this command (optional)
+In some cases you will need to use this command
 ```
 sudo update-initramfs -u
 ```
@@ -81,7 +81,7 @@ If not run nvidia-xconfig after the installer finishes.
 Reenable GUI
 ```
 sudo systemctl set-default graphical.target
-```
+``` 
 Then reboot.
 ```
 sudo reboot

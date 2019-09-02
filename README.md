@@ -51,7 +51,7 @@ If you see a black screen just press **CTRL+ALT+F1** and type
 ```
 sudo systemctl set-default multi-user.target
 ```
-In some cases you will need to use this command
+In some cases you will need to use this command (optional)
 ```
 sudo update-initramfs -u
 ```

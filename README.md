@@ -24,6 +24,7 @@ Next use nvidia-detect to find your gpu
 nvidia-detect
 ```
 First install these packages and build linux depemdecies.
+Also a special thank you to [HangedScratcher](https://github.com/HangedScratcher) for contacting me about some missing packages.
 ```
 sudo apt install firmware-linux build-essential gcc-multilib dracut linux-headers-amd64 initramfs-tools
 sudo apt build-dep linux

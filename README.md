@@ -29,8 +29,9 @@ sudo apt install firmware-linux build-essential gcc-multilib dracut linux-header
 sudo apt build-dep linux
 ```
 Download driver from https://www.nvidia.com/object/unix.html
+Those who need the legacy driver look for Latest Legacy GPU version.
 
-Disable Nouveau Driver
+Disable Nouveau Driver version.
 ```
 sudo echo 'blacklist nouveau' >> /etc/modprobe.d/blacklist.conf
 sudo dracut -v /boot/initramfs-$(uname -r).img $(uname -r)

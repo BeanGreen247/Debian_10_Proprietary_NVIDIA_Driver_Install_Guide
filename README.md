@@ -57,6 +57,17 @@ Use this command next
 ```
 sudo update-initramfs -u
 ```
+if it fails run these commands
+```
+sudo apt-get autoclean
+sudo apt-get clean
+sudo apt-get update 
+sudo apt-get upgrade
+sudo apt-get dist-upgrade
+sudo apt-get -f install
+sudo dpkg --configure -a
+sudo update-initramfs -u
+```
 Next reboot
 ```
 sudo systemctl reboot

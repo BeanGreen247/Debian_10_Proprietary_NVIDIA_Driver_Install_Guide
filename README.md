@@ -26,7 +26,14 @@ nvidia-detect
 First install these packages and build linux depemdecies.
 Also a special thank you to [HangedScratcher](https://github.com/HangedScratcher) for contacting me about some missing packages.
 ```
-sudo apt install firmware-linux build-essential gcc-multilib dracut linux-headers-amd64 initramfs-tools
+sudo apt-get autoclean
+sudo apt-get clean
+sudo apt-get update 
+sudo apt-get upgrade
+sudo apt-get dist-upgrade
+sudo apt-get -f install
+sudo dpkg --configure -a
+sudo apt install firmware-linux build-essential gcc-multilib linux-headers-amd64 initramfs-tools dracut
 sudo apt build-dep linux
 ```
 Download driver from https://www.nvidia.com/object/unix.html

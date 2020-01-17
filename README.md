@@ -1,4 +1,20 @@
 # Install proprietary NVIDIA driver on Debian 10
+## The prep
+edit your /etc/apt/sources.list file by appending "contrib non-free" at the end of the lines beginning with deb.
+```
+deb  http://deb.debian.org/debian stretch main contrib non-free
+deb-src  http://deb.debian.org/debian stretch main
+
+deb  http://deb.debian.org/debian stretch-updates main contrib non-free
+deb-src  http://deb.debian.org/debian stretch-updates main
+
+deb http://security.debian.org/ stretch/updates main contrib non-free
+deb-src http://security.debian.org/ stretch/updates main
+```
+Then run 
+```
+sudo apt update
+```
 ## The steps (part 1)
 Set root password
 ```

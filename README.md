@@ -1,6 +1,6 @@
 # Install proprietary NVIDIA driver on Debian 10
 ## The prep
-edit your /etc/apt/sources.list file by appending "contrib non-free" at the end of the lines beginning with deb.
+edit your **/etc/apt/sources.list** file by appending "contrib non-free" at the end of the lines beginning with deb.
 ```
 deb  http://deb.debian.org/debian stretch main contrib non-free
 deb-src  http://deb.debian.org/debian stretch main

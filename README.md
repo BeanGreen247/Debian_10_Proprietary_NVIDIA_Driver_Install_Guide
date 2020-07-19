@@ -49,9 +49,12 @@ sudo apt-get upgrade
 sudo apt-get dist-upgrade
 sudo apt-get -f install
 sudo dpkg --configure -a
-sudo apt install firmware-linux build-essential gcc-multilib linux-headers-amd64 initramfs-tools dracut
+sudo apt install firmware-linux build-essential gcc-multilib linux-headers-amd64 dracut
 sudo apt build-dep linux
 ```
+
+**NOTE: If it says that it will remove initramfs-tools its fine let it remove it**
+
 Download driver from https://www.nvidia.com/object/unix.html
 Those who need the legacy driver look for Latest Legacy GPU version.
 
@@ -74,8 +77,12 @@ sudo systemctl stop gdm3
 ```
 If you see a black screen just press **CTRL+ALT+F1** and type
 ```
+sudo apt install initramfs-tools
 sudo systemctl set-default multi-user.target
 ```
+
+**NOTE: If it says that it will remove dracut its fine let it remove it**
+
 Use this command next
 ```
 sudo update-initramfs -u

@@ -109,17 +109,28 @@ Next go to Downloads forlder
 ```
 cd Downloads
 ```
+Run this commands
+```
+sudo apt install linux-headers`uname -r` 
+```
+Now, add some libraries to your system 
+```
+sudo apt install build-essential
+sudo apt install libglvnd-dev pkg-config
+```
+* This fixes Error: Unable to determine the path to install libglvnd
+
 Lastly run the installer
 ```
 sudo bash NVIDIA-....run
 ```
-I would recommend to enable 32-bit support if propted.
+I would recommend to enable 32-bit support if prompted.
 
-Next select Install and overwrite existing filesort instalation.
+Next select Install and overwrite existing filesort installation.
 
-It should ask you to generate Xorg configuration. Accept that too.
+It should ask you to generate X-org configuration. Accept that too.
 
-If not run nvidia-xconfig after the installer finishes.
+If not, run nvidia-xconfig after the installer finishes.
 
 Reenable GUI
 ```
@@ -129,4 +140,4 @@ Then reboot.
 ```
 sudo reboot
 ```
-And thats it. You should have succesfully installed the proprietary NVIDIA driver.
+And that's it. You should have succesfully installed the proprietary NVIDIA driver.

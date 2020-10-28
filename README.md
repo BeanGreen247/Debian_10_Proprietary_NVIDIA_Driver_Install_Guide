@@ -58,7 +58,7 @@ sudo apt build-dep linux
 Download driver from https://www.nvidia.com/object/unix.html
 Those who need the legacy driver look for Latest Legacy GPU version.
 
-Disable Nouveau Driver version.
+Disable Nouveau and other drivers that might have conflicts with the installation.
 ```
 sudo echo 'blacklist amd76x_edac' >> /etc/modprobe.d/blacklist.conf
 sudo echo 'blacklist vga16fb' >> /etc/modprobe.d/blacklist.conf
@@ -66,6 +66,7 @@ sudo echo 'blacklist rivafb' >> /etc/modprobe.d/blacklist.conf
 sudo echo 'blacklist rivatv' >> /etc/modprobe.d/blacklist.conf
 sudo echo 'blacklist nvidiafb' >> /etc/modprobe.d/blacklist.conf
 sudo echo 'blacklist nouveau' >> /etc/modprobe.d/blacklist.conf
+
 sudo dracut -v /boot/initramfs-$(uname -r).img $(uname -r)
 ```
 Next disable display manager. To find out witch you are using type

@@ -58,9 +58,15 @@ sudo apt build-dep linux
 Download driver from https://www.nvidia.com/object/unix.html
 Those who need the legacy driver look for Latest Legacy GPU version.
 
-Disable Nouveau Driver version.
+Disable Nouveau and other drivers that might have conflicts with the installation.
 ```
+sudo echo 'blacklist amd76x_edac' >> /etc/modprobe.d/blacklist.conf
+sudo echo 'blacklist vga16fb' >> /etc/modprobe.d/blacklist.conf
+sudo echo 'blacklist rivafb' >> /etc/modprobe.d/blacklist.conf
+sudo echo 'blacklist rivatv' >> /etc/modprobe.d/blacklist.conf
+sudo echo 'blacklist nvidiafb' >> /etc/modprobe.d/blacklist.conf
 sudo echo 'blacklist nouveau' >> /etc/modprobe.d/blacklist.conf
+
 sudo dracut -v /boot/initramfs-$(uname -r).img $(uname -r)
 ```
 Next disable display manager. To find out witch you are using type
@@ -109,17 +115,28 @@ Next go to Downloads forlder
 ```
 cd Downloads
 ```
+Run this commands
+```
+sudo apt install linux-headers`uname -r` 
+```
+Now, add some libraries to your system 
+```
+sudo apt install build-essential
+sudo apt install libglvnd-dev pkg-config
+```
+* This fixes Error: Unable to determine the path to install libglvnd
+
 Lastly run the installer
 ```
 sudo bash NVIDIA-....run
 ```
-I would recommend to enable 32-bit support if propted.
+I would recommend to enable 32-bit support if prompted.
 
-Next select Install and overwrite existing filesort instalation.
+Next select Install and overwrite existing filesort installation.
 
-It should ask you to generate Xorg configuration. Accept that too.
+It should ask you to generate X-org configuration. Accept that too.
 
-If not run nvidia-xconfig after the installer finishes.
+If not, run nvidia-xconfig after the installer finishes.
 
 Reenable GUI
 ```
@@ -129,4 +146,4 @@ Then reboot.
 ```
 sudo reboot
 ```
-And thats it. You should have succesfully installed the proprietary NVIDIA driver.
+And that's it. You should have succesfully installed the proprietary NVIDIA driver.

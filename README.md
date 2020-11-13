@@ -1,4 +1,11 @@
 # Install proprietary NVIDIA driver on Debian 10
+## Shoutout
+Go follow these legends, they helped making this guide what it is today
+
+[ichirodev](https://github.com/ichirodev)
+
+[HangedScratcher](https://github.com/HangedScratcher)
+
 ## The prep
 edit your **/etc/apt/sources.list** file by appending "contrib non-free" at the end of the lines beginning with deb.
 ```
@@ -40,7 +47,6 @@ Next use nvidia-detect to find your gpu
 nvidia-detect
 ```
 First install these packages and build linux depemdecies.
-Also a special thank you to [HangedScratcher](https://github.com/HangedScratcher) for contacting me about some missing packages.
 ```
 sudo apt-get autoclean
 sudo apt-get clean

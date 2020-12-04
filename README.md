@@ -66,12 +66,12 @@ Those who need the legacy driver look for Latest Legacy GPU version.
 
 Disable Nouveau and other drivers that might have conflicts with the installation.
 ```
-sudo echo 'blacklist amd76x_edac' >> /etc/modprobe.d/blacklist.conf
-sudo echo 'blacklist vga16fb' >> /etc/modprobe.d/blacklist.conf
-sudo echo 'blacklist rivafb' >> /etc/modprobe.d/blacklist.conf
-sudo echo 'blacklist rivatv' >> /etc/modprobe.d/blacklist.conf
-sudo echo 'blacklist nvidiafb' >> /etc/modprobe.d/blacklist.conf
-sudo echo 'blacklist nouveau' >> /etc/modprobe.d/blacklist.conf
+echo 'blacklist amd76x_edac' | sudo tee -a /etc/modprobe.d/blacklist.conf
+echo 'blacklist vga16fb' | sudo tee -a /etc/modprobe.d/blacklist.conf
+echo 'blacklist rivafb' | sudo tee -a /etc/modprobe.d/blacklist.conf
+echo 'blacklist rivatv' | sudo tee -a /etc/modprobe.d/blacklist.conf
+echo 'blacklist nvidiafb' | sudo tee -a /etc/modprobe.d/blacklist.conf
+echo 'blacklist nouveau' | sudo tee -a /etc/modprobe.d/blacklist.conf
 
 sudo dracut -v /boot/initramfs-$(uname -r).img $(uname -r)
 ```
